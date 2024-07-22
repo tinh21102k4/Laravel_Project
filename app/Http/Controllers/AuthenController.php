@@ -7,6 +7,7 @@ use Directory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 
 class AuthenController extends Controller
@@ -47,7 +48,7 @@ class AuthenController extends Controller
     }
     public function postRegister(Request $req)
     {
-    //     echo $req->username . '' . $req->email . '' . $req->password;
+        //     echo $req->username . '' . $req->email . '' . $req->password;
 
         $req->validate([
             'username' => ['required', 'min:5', 'max:22'],
@@ -84,6 +85,29 @@ class AuthenController extends Controller
     public function forgotpassword()
     {
         return view('auth.ForgotPassword');
+    }
+    public function authSendEmail(Request $req)
+    {
+        // echo $req->email;
+        $req->validate([
+            'email' => 'required|email',
+        ]);
+    
+        $user = User::where('email', $req->email)->first();
+    
+        if (!$user) {
+            return redirect()->back()->with([
+                'errors' => 'Email không tồn tại trong hệ thống.',
+            ]);
+        }
+    
+        $status = Password::sendResetLink(
+            $req->only('email')
+        );
+    
+        return response()->back()->with([
+            'success' => $status,
+        ]);
     }
     public function passwordChange()
     {

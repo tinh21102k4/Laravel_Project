@@ -4,23 +4,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 mx-auto">
-                    <h1 class="mb-5">What Would You <br> Like To Read Today?</h1>
+                    <h1 class="mb-5">Bạn thích
+                        <br> đọc gì vào ngày hôm nay?
+                    </h1>
                     <ul class="list-inline widget-list-inline">
-                        <li class="list-inline-item"><a href="tags.html">City</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Color</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Creative</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Decorate</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Demo</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Elements</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Fish</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Food</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Nice</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Recipe</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Season</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Taste</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Tasty</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Vlog</a></li>
-                        <li class="list-inline-item"><a href="tags.html">Wow</a></li>
+                        @foreach ($category as $cate)
+                            <li class="list-inline-item"><a href="{{ route('client.productCate', ['id'=>$cate->id]) }}">{{ $cate->name }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -177,7 +167,8 @@
 
                     <article class="card">
                         <div class="post-slider slider-sm">
-                            <img src="{{ asset('clients/images/post/post-5.jpg') }}" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-5.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
                         </div>
                         <div class="card-body">
                             <h3 class="h4 mb-3"><a class="post-title" href="post-details.html">How To Make Cupcakes and
@@ -222,8 +213,10 @@
                     <h2 class="h5 section-title">Recent Post</h2>
                     <article class="card mb-4">
                         <div class="post-slider">
-                            <img src="{{ asset('clients/images/post/post-10.jpg') }}" class="card-img-top" alt="post-thumb">
-                            <img src="{{ asset('clients/images/post/post-1.jpg') }}" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-10.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-1.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
                         </div>
                         <div class="card-body">
                             <h3 class="mb-3"><a class="post-title" href="post-elements.html">Elements That You Can Use
@@ -256,7 +249,8 @@
 
                     <article class="card mb-4">
                         <div class="post-slider">
-                            <img src="{{ asset('clients/images/post/post-3.jpg') }}" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-3.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
                         </div>
                         <div class="card-body">
                             <h3 class="mb-3"><a class="post-title" href="post-details.html">Advice From a Twenty
@@ -290,7 +284,8 @@
 
                     <article class="card mb-4">
                         <div class="post-slider">
-                            <img src="{{ asset('clients/images/post/post-7.jpg') }}" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-7.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
                         </div>
 
                         <div class="card-body">
@@ -357,7 +352,8 @@
 
                     <article class="card mb-4">
                         <div class="post-slider">
-                            <img src="{{ asset('clients/images/post/post-5.jpg') }}" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-5.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
                         </div>
                         <div class="card-body">
                             <h3 class="mb-3"><a class="post-title" href="post-details.html">How To Make Cupcakes and
@@ -392,8 +388,10 @@
 
                     <article class="card mb-4">
                         <div class="post-slider">
-                            <img src="{{ asset('clients/images/post/post-8.jpg') }}" class="card-img-top" alt="post-thumb">
-                            <img src="{{ asset('') }}clients/images/post/post-9.jpg" class="card-img-top" alt="post-thumb">
+                            <img src="{{ asset('clients/images/post/post-8.jpg') }}" class="card-img-top"
+                                alt="post-thumb">
+                            <img src="{{ asset('') }}clients/images/post/post-9.jpg" class="card-img-top"
+                                alt="post-thumb">
                         </div>
                         <div class="card-body">
                             <h3 class="mb-3"><a class="post-title" href="post-details.html">How To Make Cupcakes and
@@ -506,7 +504,8 @@
                         </div>
                         <div class="media align-items-center">
                             <div class="mr-3">
-                                <img class="widget-author-image" src="{{ asset('clients/images/john-doe.jpg') }}" alt="John Doe">
+                                <img class="widget-author-image" src="{{ asset('clients/images/john-doe.jpg') }}"
+                                    alt="John Doe">
                             </div>
                             <div class="media-body">
                                 <h5 class="mb-1"><a class="post-title" href="author-single.html">John Doe</a></h5>

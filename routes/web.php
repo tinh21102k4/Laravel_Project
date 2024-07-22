@@ -22,6 +22,10 @@ Route::prefix('client')
 ->controller(ClientController::class)
 ->group(function (){
     Route::get('/home' ,  'index')->name('home');
+    Route::get('/detailNews/{id}' ,  'detailNews')->name('detailNews');
+    Route::get('/search' ,  'resultSearch')->name('resultSearch');
+    Route::get('/productCate/{id}' ,  'productCate')->name('productCate');
+    
 });
 Route::prefix('admin')
 ->as('admin.')
@@ -31,11 +35,19 @@ Route::prefix('admin')
     Route::get('/dashboard' ,  'index')->name('dashboard');
     Route::get('/Crm' ,  'crm')->name('Crm');
 });
+Route::get('/',[ClientController::class, 'index'])->name('home');
+
 Route::get('/login',[AuthenController::class, 'login'])->name('login');
 Route::post('/login',[AuthenController::class, 'postLogin'])->name('postLogin');
+
 Route::get('/register',[AuthenController::class, 'register'])->name('register');
 Route::post('/register',[AuthenController::class, 'postRegister'])->name('postRegister');
+
 Route::get('/logout',[AuthenController::class, 'logout'])->name('logout');
+
 Route::get('/forgotpassword',[AuthenController::class, 'forgotpassword'])->name('forgotpassword');
+Route::post('/forgotpassword',[AuthenController::class, 'authSendEmail'])->name('authSendEmail');
+
+
 Route::get('/PasswordChange',[AuthenController::class, 'PasswordChange'])->name('PasswordChange');
 Route::get('/notificationDone',[AuthenController::class, 'notificationDone'])->name('notificationDone');

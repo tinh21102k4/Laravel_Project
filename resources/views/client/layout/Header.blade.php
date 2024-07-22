@@ -1,6 +1,6 @@
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-white">
-        <a class="navbar-brand order-1" href="index.html">
+        <a class="navbar-brand order-1" href="{{ route('client.home') }}">
             <img class="img-fluid" width="100px" src="{{ asset('clients/images/logo.png') }}"
                 alt="Reader | Hugo Personal Blog Template">
         </a>
@@ -18,7 +18,9 @@
                         Danh Mục <i class="ti-angle-down ml-1"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="about-me.html">About Me</a>
+                        @foreach ($category as $cate )
+                            <a class="dropdown-item" href="{{ route('client.productCate', ['id'=>$cate->id]) }}">{{ $cate->name }}</a>    
+                        @endforeach
                     </div>
                 </li>
                 <li class="nav-item">
@@ -59,14 +61,14 @@
             </select>
 
             <!-- search -->
-            <form class="search-bar">
-                <input id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-            </form>
-
-            <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse"
+            <form class="search-bar" action='{{ route('client.resultSearch') }}' method='GET'>
+                @csrf
+                <input id="search-query" name="search" type="search" placeholder="Type &amp; Hit Enter...">
+                <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse"
                 data-target="#navigation">
                 <i class="ti-menu"></i>
             </button>
+            </form>
         </div>
 
     </nav>
