@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en-us">
 
 <head>
@@ -29,6 +21,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:updated_time" content="2020-03-15T15:40:24+06:00" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>

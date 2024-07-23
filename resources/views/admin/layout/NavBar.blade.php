@@ -37,11 +37,11 @@
                 <div class="collapse menu-dropdown" id="sidebarDashboards">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
-                            <a href="dashboard-analytics.html" class="nav-link" data-key="t-analytics">
+                            <a href="{{ route('admin.dashboard') }}" class="nav-link" data-key="t-analytics">
                                 Analytics </a>
                         </li>
                         <li class="nav-item">
-                            <a href="dashboard-crm.html" class="nav-link" data-key="t-crm"> CRM </a>
+                            <a href="{{ route('admin.UserManager') }}" class="nav-link" data-key="t-crm">Quản Lý Người Dùng </a>
                         </li>
                     </ul>
                 </div>
@@ -49,16 +49,16 @@
             <li class="nav-item">
                 <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse" role="button"
                     aria-expanded="false" aria-controls="sidebarApps">
-                    <i class="ri-apps-2-line"></i> <span data-key="t-apps">Apps</span>
+                    <i class="ri-apps-2-line"></i> <span data-key="t-apps">Ứng Dụng</span>
                 </a>
                 <div class="collapse menu-dropdown" id="sidebarApps">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
                             <a href="#sidebarCalendar" class="nav-link" data-bs-toggle="collapse" role="button"
                                 aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
-                                Calendar
+                                Quản Lý Danh Mục
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarCalendar">
+                            {{-- <div class="collapse menu-dropdown" id="sidebarCalendar">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender"> Main
@@ -69,45 +69,12 @@
                                             data-key="t-month-grid"> Month Grid </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </li>
                         <li class="nav-item">
-                            <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Chat </a>
+                            <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Quản Lý Tin Tức </a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a href="#sidebarEmail" class="nav-link" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
-                                Email
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarEmail">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="apps-mailbox.html" class="nav-link" data-key="t-mailbox">
-                                            Mailbox </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#sidebaremailTemplates" class="nav-link" data-bs-toggle="collapse"
-                                            role="button" aria-expanded="false"
-                                            aria-controls="sidebaremailTemplates" data-key="t-email-templates">
-                                            Email Templates
-                                        </a>
-                                        <div class="collapse menu-dropdown" id="sidebaremailTemplates">
-                                            <ul class="nav nav-sm flex-column">
-                                                <li class="nav-item">
-                                                    <a href="apps-email-basic.html" class="nav-link"
-                                                        data-key="t-basic-action"> Basic Action </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="apps-email-ecommerce.html" class="nav-link"
-                                                        data-key="t-ecommerce-action"> Ecommerce Action
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li> --}}
+                        
                     </ul>
                 </div>
             </li>

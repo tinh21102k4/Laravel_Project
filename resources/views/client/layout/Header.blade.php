@@ -18,8 +18,9 @@
                         Danh Mục <i class="ti-angle-down ml-1"></i>
                     </a>
                     <div class="dropdown-menu">
-                        @foreach ($category as $cate )
-                            <a class="dropdown-item" href="{{ route('client.productCate', ['id'=>$cate->id]) }}">{{ $cate->name }}</a>    
+                        @foreach ($category as $cate)
+                            <a class="dropdown-item"
+                                href="{{ route('client.productCate', ['id' => $cate->id]) }}">{{ $cate->name }}</a>
                         @endforeach
                     </div>
                 </li>
@@ -27,7 +28,8 @@
                     <a class="nav-link" href="shop.html">Shop</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                         @auth
                             {{ Auth::user()->name }}
                         @else
@@ -39,8 +41,11 @@
                             <a class="dropdown-item" href="{{ route('login') }}">Đăng nhập</a>
                             <a class="dropdown-item" href="{{ route('register') }}">Đăng ký</a>
                         @else
+                            @if (Auth::user()->role == 1)
+                                <a class="dropdown-item" href="{{ route('admin.dashboard') }}">Quản trị website</a>
+                            @endif
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
                                 Đăng xuất
                             </a>
@@ -50,7 +55,7 @@
                         @endauth
                     </div>
                 </li>
-                
+
             </ul>
         </div>
 
@@ -65,9 +70,9 @@
                 @csrf
                 <input id="search-query" name="search" type="search" placeholder="Type &amp; Hit Enter...">
                 <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse"
-                data-target="#navigation">
-                <i class="ti-menu"></i>
-            </button>
+                    data-target="#navigation">
+                    <i class="ti-menu"></i>
+                </button>
             </form>
         </div>
 

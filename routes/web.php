@@ -27,14 +27,19 @@ Route::prefix('client')
     Route::get('/productCate/{id}' ,  'productCate')->name('productCate');
     
 });
+
+
 Route::prefix('admin')
 ->as('admin.')
 ->middleware('CheckAdmin')
 ->controller(AdminController::class)
 ->group(function (){
     Route::get('/dashboard' ,  'index')->name('dashboard');
-    Route::get('/Crm' ,  'crm')->name('Crm');
+    Route::get('/UserManager' ,  'userManager')->name('UserManager');
+    Route::delete('userDelete/{id}','deleteUser')->name('deleteUser');
 });
+
+
 Route::get('/',[ClientController::class, 'index'])->name('home');
 
 Route::get('/login',[AuthenController::class, 'login'])->name('login');
