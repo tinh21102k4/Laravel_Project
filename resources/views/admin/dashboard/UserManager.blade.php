@@ -4,16 +4,132 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title mb-0">Danh Sách Người Dùng</h4>
+                    <h4 class="card-title mb-0">Danh Sách Tài Khoản </h4>
                 </div><!-- end card header -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Tài khoản admin</p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <h5 class="text-success fs-14 mb-0">
+                                            <i class="ri-arrow-right-up-line fs-13 align-middle"></i> +16.24 %
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-end justify-content-between mt-4">
+                                    <div>
+                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">$<span class="counter-value" data-target="559.25">0</span>k </h4>
+                                        <a href="" class="text-decoration-underline">Xem Tất Cả</a>
+                                    </div>
+                                    <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-danger-subtle rounded fs-3">
+                                            <i class="bx bx-user-circle text-danger"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                    
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Khách Hàng</p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <h5 class="text-success fs-14 mb-0">
+                                            <i class="ri-arrow-right-up-line fs-13 align-middle"></i> +29.08 %
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-end justify-content-between mt-4">
+                                    <div>
+                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="183.35">0</span>M </h4>
+                                        <a href="" class="text-decoration-underline">Xem Tất Cả</a>
+                                    </div>
+                                    <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-warning-subtle rounded fs-3">
+                                            <i class="bx bx-user-circle text-warning"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
 
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 overflow-hidden">
+                                     <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Đơn Hàng</p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <h5 class="text-danger fs-14 mb-0">
+                                            <i class="ri-arrow-right-down-line fs-13 align-middle"></i> -3.57 %
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-end justify-content-between mt-4">
+                                    <div>
+                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="36894">0</span></h4>
+                                        <a href="" class="text-decoration-underline">Xem Tất cả đơn hàng</a>
+                                    </div>
+                                    <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-info-subtle rounded fs-3">
+                                            <i class="bx bx-shopping-bag text-info"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+        
+                    <div class="col-xl-3 col-md-6">
+                        <!-- card -->
+                        <div class="card card-animate">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Số Dư</p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <h5 class="text-muted fs-14 mb-0">
+                                            +0.00 %
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-end justify-content-between mt-4">
+                                    <div>
+                                        <h4 class="fs-22 fw-semibold ff-secondary mb-4">$<span class="counter-value" data-target="165.89">0</span>k </h4>
+                                        <a href="" class="text-decoration-underline">Rút Tiền</a>
+                                    </div>
+                                    <div class="avatar-sm flex-shrink-0">
+                                        <span class="avatar-title bg-primary-subtle rounded fs-3">
+                                            <i class="bx bx-wallet text-primary"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div> <!-- end row-->
                 <div class="card-body">
                     <div class="listjs-table" id="customerList">
                         <div class="row g-4 mb-3">
                             <div class="col-sm-auto">
                                 <div>
                                     <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal"
-                                        id="create-btn" data-bs-target="#showModal"><i
+                                        id="create-btn" data-bs-target="#addUser"><i
                                             class="ri-add-line align-bottom me-1"></i> Thêm</button>
                                     <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i
                                             class="ri-delete-bin-2-line"></i></button>
@@ -81,7 +197,7 @@
                                                 <div class="d-flex gap-2">
                                                     <div class="edit">
                                                         <button class="btn btn-sm btn-success edit-item-btn"
-                                                            data-bs-toggle="modal" data-bs-target="#showModal"> Sửa
+                                                            data-bs-toggle="modal" data-bs-target="#editUser"> Sửa
                                                         </button>
                                                     </div>
                                                     <div class="remove">
@@ -118,7 +234,7 @@
                                         Previous
                                     </a>
                                 @endif
-                        
+
                                 <ul class="pagination listjs-pagination mb-0">
                                     @if ($user->currentPage() > 1)
                                         <li class="page-item">
@@ -128,22 +244,23 @@
                                             <li class="page-item disabled"><span class="page-link">...</span></li>
                                         @endif
                                     @endif
-                        
+
                                     <li class="page-item active">
                                         <a class="page-link" href="javascript:void(0);">{{ $user->currentPage() }}</a>
                                     </li>
-                        
+
                                     @if ($user->currentPage() < $user->lastPage() - 1)
                                         <li class="page-item disabled"><span class="page-link">...</span></li>
                                     @endif
-                        
+
                                     @if ($user->currentPage() < $user->lastPage())
                                         <li class="page-item">
-                                            <a class="page-link" href="{{ $user->url($user->lastPage()) }}">{{ $user->lastPage() }}</a>
+                                            <a class="page-link"
+                                                href="{{ $user->url($user->lastPage()) }}">{{ $user->lastPage() }}</a>
                                         </li>
                                     @endif
                                 </ul>
-                        
+
                                 @if ($user->hasMorePages())
                                     <a class="page-item pagination-next" href="{{ $user->nextPageUrl() }}">
                                         Next
@@ -155,8 +272,8 @@
                                 @endif
                             </div>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div><!-- end card -->
             </div>
@@ -165,7 +282,7 @@
         <!-- end col -->
     </div>
 
-    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-light p-3">
@@ -234,11 +351,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="btn-close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mt-2 text-center">
-                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop"
+                            colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
                         <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
                             <h4>Are you Sure ?</h4>
                             <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?</p>
@@ -246,11 +365,29 @@
                     </div>
                     <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
                         <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn w-sm btn-danger" id="delete-record">Yes, Delete It!</button>
+                        <form action="" id="deleteConfirm" method ="post">
+                            @csrf
+                            @method('delete')
+                            <button class="btn w-sm btn-danger">Yes, Delete It!</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--end modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var exampleModal = document.getElementById('deleteRecordModal');
+
+            exampleModal.addEventListener('show.bs.modal', function(event) {
+                var button = event.relatedTarget;
+                var id = button.getAttribute('data-id');
+                var form = document.getElementById('deleteConfirm');
+
+                // Cập nhật action của form với id người dùng
+                form.setAttribute('action', '{{ route('admin.deleteUser', ':id') }}'.replace(':id', id));
+            });
+        });
+    </script>
 @endsection

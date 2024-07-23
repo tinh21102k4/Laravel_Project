@@ -28,13 +28,10 @@ class AdminController extends Controller
     public function deleteUser($id)
     {
         $user = User::findOrFail($id);
-
         $user->delete();
-
         if (request()->ajax()) {
             return response()->json(['success' => true]);
         }
-
         return redirect()->back()->with('success', 'Người dùng đã được xóa thành công.');
     }
 }

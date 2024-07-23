@@ -36,7 +36,7 @@ Route::prefix('admin')
 ->group(function (){
     Route::get('/dashboard' ,  'index')->name('dashboard');
     Route::get('/UserManager' ,  'userManager')->name('UserManager');
-    Route::delete('userDelete/{id}','deleteUser')->name('deleteUser');
+    Route::delete('/userDelete/{id}','deleteUser')->name('deleteUser');
 });
 
 
