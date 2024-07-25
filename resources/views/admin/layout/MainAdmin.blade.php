@@ -10,7 +10,8 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('admin.layout.CssAdmin')
 </head>
 
@@ -55,7 +56,7 @@
         <div class="app-menu navbar-menu">
             <!-- LOGO -->
             @include('admin.layout.NavBar')
-
+            
             <div class="sidebar-background"></div>
         </div>
 
@@ -64,6 +65,7 @@
         <div class="main-content">
 
             <div class="page-content">
+
                 @yield('content-here')
 
             </div>
@@ -81,10 +83,11 @@
     <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
         <i class="ri-arrow-up-line"></i>
     </button>
-
-    {{-- @include('admin.layout.LoadWeb') --}}
-    {{-- @include('admin.layout.ThemeSetting') --}}
 </body>
+<script>
+    let script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/toastify-js';
+document.head.appendChild(script);
+</script>
 @include('admin.layout.JsAdmin')
-
 </html>

@@ -36,7 +36,10 @@ Route::prefix('admin')
 ->group(function (){
     Route::get('/dashboard' ,  'index')->name('dashboard');
     Route::get('/UserManager' ,  'userManager')->name('UserManager');
+    Route::get('/SearchUser' ,  'searchUser')->name('SearchUser');
     Route::delete('/userDelete/{id}','deleteUser')->name('deleteUser');
+    // Route::post('/UserManager' ,  'addUser')->name('addUser');
+
 });
 
 

@@ -15,3 +15,10 @@
 <link href="{{ asset('admins/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- custom Css-->
 <link href="{{ asset('admins/assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+
+<!-- dropzone css -->
+<link rel="stylesheet" href="{{ asset('admins') }}/assets/libs/dropzone/dropzone.css" type="text/css" />
+<!-- Filepond css -->
+<link rel="stylesheet" href="{{ asset('admins') }}/assets/libs/filepond/filepond.min.css" type="text/css" />
+<link rel="stylesheet"
+    href="{{ asset('admins') }}/assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">

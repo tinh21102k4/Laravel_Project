@@ -79,7 +79,7 @@ class AuthenController extends Controller
             ]);
         }
         return redirect()->back()->with([
-            'message' => 'Thêm thành công ! '
+            'message' => 'Đăng Ký thành công ! '
         ]);
     }
     public function forgotpassword()
