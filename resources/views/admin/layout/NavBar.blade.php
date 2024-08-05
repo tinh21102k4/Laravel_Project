@@ -58,109 +58,44 @@
                                 aria-expanded="false" aria-controls="sidebarCalendar" data-key="t-calender">
                                 Quản Lý Danh Mục
                             </a>
-                            {{-- <div class="collapse menu-dropdown" id="sidebarCalendar">
+                            <div class="collapse menu-dropdown" id="sidebarCalendar">
+
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="apps-calendar.html" class="nav-link" data-key="t-main-calender"> Main
-                                            Calender </a>
+                                        <a href="{{ route('admin.category.ListCategory') }}" class="nav-link" data-key="t-main-calender"> Danh sách danh mục</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="apps-calendar-month-grid.html" class="nav-link"
-                                            data-key="t-month-grid"> Month Grid </a>
+                                        <a href="#" class="nav-link"
+                                            data-key="t-month-grid">Thêm danh mục</a>
                                     </li>
                                 </ul>
-                            </div> --}}
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a href="apps-chat.html" class="nav-link" data-key="t-chat"> Quản Lý Tin Tức </a>
+                            <a href="#sliderNews" class="nav-link" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sliderNews" data-key="t-calender">
+                                Quản Lý Bài Viết
+                            </a>
+                            <div class="collapse menu-dropdown" id="sliderNews">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="{{ route('admin.news.ListNews') }}" class="nav-link" data-key="t-main-calender"> Danh sách Bài viết</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('admin.news.addNews') }}" class="nav-link"
+                                            data-key="t-month-grid">Thêm bài viết</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         
                     </ul>
                 </div>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="sidebarLayouts">
-                    <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Layouts</span> <span
-                        class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+                <a class="nav-link menu-link" href="{{ route('client.home') }}" >
+                    <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Quay về trang chính</span>
                 </a>
-                <div class="collapse menu-dropdown" id="sidebarLayouts">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="layouts-horizontal.html" target="_blank" class="nav-link"
-                                data-key="t-horizontal">Horizontal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="layouts-detached.html" target="_blank" class="nav-link"
-                                data-key="t-detached">Detached</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="layouts-two-column.html" target="_blank" class="nav-link"
-                                data-key="t-two-column">Two Column</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="layouts-vertical-hovered.html" target="_blank" class="nav-link"
-                                data-key="t-hovered">Hovered</a>
-                        </li>
-                    </ul>
-                </div>
-            </li> <!-- end Dashboard Menu -->
-
-            <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages">Bảo Mật</span>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="sidebarAuth">
-                    <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Authentication</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarAuth">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="maps-google.html" class="nav-link" data-key="t-google">
-                                Google
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link menu-link" href="#sidebarLanding" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="sidebarLanding">
-                    <i class="ri-rocket-line"></i> <span data-key="t-landing">Landing</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarLanding">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="landing.html" class="nav-link" data-key="t-one-page"> One Page
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing"> NFT
-                                Landing </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="job-landing.html" class="nav-link" data-key="t-job">Job</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link menu-link" href="#sidebarMaps" data-bs-toggle="collapse" role="button"
-                    aria-expanded="false" aria-controls="sidebarMaps">
-                    <i class="ri-map-pin-line"></i> <span data-key="t-maps">Maps</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarMaps">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="maps-google.html" class="nav-link" data-key="t-google">
-                                Google
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </li>
 
 

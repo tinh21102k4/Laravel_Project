@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthenController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,8 +40,32 @@ Route::prefix('admin')
     Route::get('/UserManager' ,  'userManager')->name('UserManager');
     Route::get('/SearchUser' ,  'searchUser')->name('SearchUser');
     Route::delete('/userDelete/{id}','deleteUser')->name('deleteUser');
-    // Route::post('/UserManager' ,  'addUser')->name('addUser');
 
+    Route::prefix('category')
+    ->as('category.')
+    ->controller(CategoryController::class)
+    ->group(function(){
+        Route::get('/listCategory' ,  'listCategory')->name('ListCategory');
+        Route::post('/addCategory' ,  'addCategory')->name('postCategory');
+        Route::delete('/categoryDelete/{id}','delCategory')->name('delCategory');
+        Route::get('/editCategory/{id}' ,  'detailCategory')->name('detailCategory');
+        Route::put('/editCategory/{id}' ,  'editCategory')->name('editCategory');
+
+    });
+
+    Route::prefix('news')
+    ->as('news.')
+    ->controller(NewsController::class)
+    ->group(function(){
+        Route::get('/listnews' ,  'listNews')->name('ListNews');
+        Route::get('/addnews' ,  'addNews')->name('addNews');
+        Route::post('/addnews' ,  'postNews')->name('postNews');
+        Route::delete('/newsDelete/{id}','delNews')->name('delNews');
+        Route::get('/editnews/{id}' ,  'detailNews')->name('detailNews');
+        Route::put('/editnews/{id}' ,  'editNews')->name('editNews');
+        Route::post('/newRestore/{id}', 'restore')->name('restore');
+
+    });
 });
 
 

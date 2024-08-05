@@ -16,4 +16,8 @@ class image_url extends Model
         'image_type',
 
     ];
+    public function news()
+    {
+        return $this->belongsTo(news::class);
+    }
 }
