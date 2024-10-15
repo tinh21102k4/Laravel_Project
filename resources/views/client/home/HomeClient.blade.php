@@ -66,12 +66,12 @@
                 stroke-width="2" />
         </svg>
     </div>
-    <!-- end of banner -->
+
     <section class="section pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-5">
-                    <h2 class="h5 section-title">Editors Pick</h2>
+                    <h2 class="h5 section-title">Bài viết mới nhất</h2>
                     <article class="card">
                         <div class="post-slider slider-sm">
                             <img src="{{ asset('clients/images/post/post-1.jpg') }}" class="card-img-top" alt="post-thumb">

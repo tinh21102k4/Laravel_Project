@@ -11,6 +11,28 @@
                 {{ session('delete') }}
             </div>
         @endif
+        <div class="row g-4 mb-3 ms-2">
+            <div class="col-sm-auto">
+                <button class="btn btn-success">
+                    <a href="{{ route('admin.news.addNews') }}" class=" add-btn"><i
+                            class="ri-add-line align-bottom me-1"></i> Thêm Bài viết</a>
+                    <button class="btn btn-soft-danger"><i class="ri-delete-bin-2-line"></i></button>
+                </button>
+            </div>
+            <div class="col-sm">
+                <div class="d-flex justify-content-sm-end">
+                    <div class="search-box ms-2">
+                        <form action="" method="GET">
+                            @csrf
+                            <input type="text" class="form-control search" name="searchUser"
+                                placeholder="Tìm Kiếm Bài viết..." id="search-input">
+                            <i class="ri-search-line search-icon"></i>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
@@ -24,6 +46,7 @@
                                                 value="option">
                                         </div>
                                     </th>
+                                    <th>ID</th>
                                     <th>Tiêu Đề </th>
                                     <th>Nội Dung</th>
                                     <th>Danh Mục</th>
@@ -34,48 +57,57 @@
                             <tbody>
                                 @foreach ($news as $new)
                                     <tr>
-                                        <th scope="row">
+                                        <td scope="row">
                                             <div class="form-check">
                                                 <input class="form-check-input fs-15" type="checkbox" name="checkAll"
                                                     value="option1">
                                             </div>
-                                        </th>
-
+                                        </td>
+                                        <td>{{ $new->id }}</td>
                                         <td>{{ $new->title }}</td>
                                         <td>{{ Str::limit($new->content, 150) }}</td>
                                         <td>{{ $new->category->name }}</td>
-                                        @foreach ($new->images as $img)
-                                            <td><img src="{{ $img->img_url }} " width="100" height="100"
-                                                    alt="Hình ảnh"></td>
-                                            <td>                                           
-                                        @endforeach
-                                        
+                                        <td>
+                                            @if ($new->images)
+                                                @foreach ($new->images as $image)
+                                                    <img src="{{ asset('storage/' . $image->img_url) }}" alt="Image for "
+                                                        width="150">
+                                                @endforeach
+                                            @else
+                                                <p>No images available for this news.</p>
+                                            @endif
+                                        </td>
+                                        <td>
                                             <div class="dropdown d-inline-block">
                                                 <button class="btn btn-soft-secondary btn-sm dropdown" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
                                                     <i class="ri-more-fill align-middle"></i>
                                                 </button>
                                                 <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a href="#!" class="dropdown-item"><i
+                                                    <li><a href="{{ route('admin.news.detailNews', $new->id) }}" class="dropdown-item"><i
                                                                 class="ri-eye-fill align-bottom me-2 text-muted"></i>
                                                             View</a>
                                                     </li>
-                                                    <li><a class="dropdown-item edit-item-btn"><i
+                                                    <li><a class="dropdown-item edit-item-btn" href="{{ route('admin.news.detailNews', $new->id) }}"><i
                                                                 class="ri-pencil-fill align-bottom me-2 text-muted"></i>
                                                             Edit</a></li>
                                                     <li>
                                                         @if ($new->trashed())
                                                             <form action="{{ route('admin.news.restore', $new->id) }}"
-                                                                method="POST" >
+                                                                method="POST">
                                                                 @csrf
-                                                                <button class="dropdown-item remove-item-btn" type="submit"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>Restore</button>
+                                                                <button class="dropdown-item remove-item-btn"
+                                                                    type="submit"><i
+                                                                        class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>Restore</button>
                                                             </form>
                                                         @else
                                                             <form action="{{ route('admin.news.delNews', $new->id) }}"
                                                                 method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button class="dropdown-item remove-item-btn" type="submit"><i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>Delete</button>
+                                                                <button class="dropdown-item remove-item-btn"
+                                                                    type="submit"><i
+                                                                        class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>Delete</button>
                                                             </form>
                                                         @endif
                                                     </li>

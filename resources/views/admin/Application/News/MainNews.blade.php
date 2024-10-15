@@ -21,29 +21,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="listjs-table" id="customerList">
-                            <div class="row g-4 mb-3">
-                                <div class="col-sm-auto">
-                                    <div>
-                                        <a href="{{ route('admin.news.addNews') }}" class="btn btn-success add-btn" id="create-btn"
-                                            data-bs-toggle="modal" data-bs-target="#addModelCate"><i
-                                                class="ri-add-line align-bottom me-1"></i> Thêm Bài viết</a>
-                                        <button class="btn btn-soft-danger"><i class="ri-delete-bin-2-line"></i></button>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="d-flex justify-content-sm-end">
-                                        <div class="search-box ms-2">
-                                            <form action="" method="GET">
-                                                @csrf
-                                                <input type="text" class="form-control search" name="searchUser"
-                                                    placeholder="Tìm Kiếm Bài viết..." id="search-input">
-                                                <i class="ri-search-line search-icon"></i>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
 
                             @yield('ListNews')
 

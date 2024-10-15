@@ -36,4 +36,8 @@ class ClientController extends Controller
         // dd($detailNews);
         return view('client.home.PostsDetail', compact('detailNews', 'category'));
     }
+    public function newPosts(){
+        $new = news::with(['category', 'images'])->latest()->take(1)->get();
+        return view('client.home.HomeClient', compact(['new']));
+    }
 }
